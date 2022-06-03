@@ -8,6 +8,7 @@
     padding-bottom: 75px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     border-radius: 1rem;
 
     h2{
@@ -35,6 +36,31 @@
 
         svg{
             color: #fff;
+        }
+    }
+
+
+    .tasks{
+        width: 100%;
+        margin-top: 20px;
+
+        &>p{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            font-size: .9rem;
+
+            span{
+                display: flex;
+                align-items: center;
+            }
+    
+            svg{
+                color: red;
+                cursor: pointer;
+            }
         }
     }
 }
