@@ -1,0 +1,40 @@
+.taskList{
+    background-color: #fff;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.06);
+    margin: auto;
+    max-width: 700px;
+    margin-top: -75px;
+    padding: 50px;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+
+    h2{
+        font-weight: normal;
+    }
+
+    input{
+        height: 35px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #eee;
+        margin-right: 10px;
+        border-radius: .4rem;
+
+    }
+
+    button{
+        height: 35px;
+        width: 35px;
+        background-color: rgb(6, 177, 6);
+        border: none;
+        padding: 8px;
+        border-radius: .4rem;
+        cursor: pointer;
+
+        svg{
+            color: #fff;
+        }
+    }
+}

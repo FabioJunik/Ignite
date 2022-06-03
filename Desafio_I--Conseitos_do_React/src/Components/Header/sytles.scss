@@ -1,0 +1,12 @@
+header{
+    height: 150px;
+    width: 100%;
+    background-color: #2442ae;
+    padding-top: 20px;
+
+    & h2{
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+    }
+}
