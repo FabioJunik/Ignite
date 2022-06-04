@@ -36,6 +36,18 @@ const TaskList = () => {
     setTasks(data);
     localStorage.setItem('tasks',JSON.stringify(data));
   }
+
+  function checkTask(id: number){
+   const data = tasks.map(task=>task.id===id ?{
+                ...task, 
+                isComplete : !task.isComplete 
+              }: task);
+
+    setTasks(data);
+    localStorage.setItem('tasks',JSON.stringify(data));
+    
+  }
+
   return (
     <section className='taskList'>
       <h2>Minhas tasks</h2>
@@ -53,6 +65,7 @@ const TaskList = () => {
             <span>
               <input type="checkbox" 
                 checked={task.isComplete} 
+                onChange={()=>checkTask(task.id)}
               />
               <p>{task.title}</p>
             </span>
