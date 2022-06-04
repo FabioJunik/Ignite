@@ -31,6 +31,11 @@ const TaskList = () => {
     localStorage.setItem('tasks',JSON.stringify([...tasks,data]));
   }
 
+  function removeTask(id:number){
+    const data = tasks.filter(task=>task.id!==id); 
+    setTasks(data);
+    localStorage.setItem('tasks',JSON.stringify(data));
+  }
   return (
     <section className='taskList'>
       <h2>Minhas tasks</h2>
@@ -51,7 +56,7 @@ const TaskList = () => {
               />
               <p>{task.title}</p>
             </span>
-            <FiTrash/>
+            <FiTrash onClick={()=>removeTask(task.id)}/>
         </p>
         ))}
       </div>
